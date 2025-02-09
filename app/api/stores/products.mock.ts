@@ -1,16 +1,16 @@
 import { ProductType } from "./products.types";
 
-const imageUrl =
-  "https://thumbs.dreamstime.com/z/whole-roasted-turkey-chicken-garnished-herbs-isolated-white-background-concept-food-thanksgiving-day-fresh-333799794.jpg?ct=jpeg";
+const imageUrl = "https://i.imgur.com/WLIacEY.png";
 
 export const bestSellersProductsMock: ProductType[] = [
   {
     id: "1",
-    name: "Açaí Natural da Caasa",
+    name: "Açaí Natural da Casa",
     priceLabel: "R$40,00",
     discountedPriceLabel: "R$20,00",
     image: imageUrl,
-    description: "Açaí, banana, granola, leite condensado e morango.",
+    description:
+      "Sabor intenso e específico do fruto açaí com sabor único e agradável, que no momento de consumo pode ser...",
     discountTagLabel: "-50%",
   },
   {
@@ -19,16 +19,17 @@ export const bestSellersProductsMock: ProductType[] = [
     priceLabel: "R$100,00",
     discountedPriceLabel: "R$50,00",
     image: imageUrl,
-    description: "Açaí, banana, granola, leite condensado, morango e kiwi.",
+    description:
+      "Açaí extra cremoso de qualidade, (laça cremes) na cumbuca de isopor, com coberturas e complementos variados.",
     discountTagLabel: "-50%",
   },
   {
     id: "3",
     name: "Açaí com Morango",
     priceLabel: "R$22,90",
-    discountedPriceLabel: "R$10,00",
+    discountedPriceLabel: null,
     image: imageUrl,
     description: "Açaí e morango.",
-    discountTagLabel: "-10%",
+    discountTagLabel: null,
   },
 ];

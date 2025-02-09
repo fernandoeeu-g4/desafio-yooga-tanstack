@@ -1,11 +1,8 @@
-import { StatusType } from "@/app/stores/[store-id]/page";
+import { StatusType } from "@/features/stores/components/store-info";
 import { fakeRandomDelay } from "@/shared/helpers/async";
+import { createServerFn } from "@tanstack/start";
 
-type GetStore = {
-  id: string;
-};
-
-const store: StoreType = {
+export const store: StoreType = {
   id: "1",
   name: "Vila do Açaí - Jardim da Penha",
   price: 100,
@@ -29,7 +26,13 @@ export type StoreType = {
   status: StatusType;
 };
 
-export async function useStore({ id }: GetStore) {
-  await fakeRandomDelay();
-  return store;
-}
+export const fetchStore = createServerFn({ method: "GET" })
+  .validator((d: string) => d)
+  .handler(async ({ data }) => {
+    await fakeRandomDelay();
+    // In a real application, you would fetch the store data from a database
+    // based on the provided ID.
+    // Here, we are using a mock store.
+    console.info(`Fetching store with id ${data}...`);
+    return store;
+  });

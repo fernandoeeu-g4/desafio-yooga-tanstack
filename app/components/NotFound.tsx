@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router'
+import { Link } from "@tanstack/react-router";
 
 export function NotFound({ children }: { children?: any }) {
   return (
@@ -14,12 +14,13 @@ export function NotFound({ children }: { children?: any }) {
           Go back
         </button>
         <Link
-          to="/"
+          params={{ storeId: "1" }}
+          to="/stores/$storeId"
           className="bg-cyan-600 text-white px-2 py-1 rounded uppercase font-black text-sm"
         >
           Start Over
         </Link>
       </p>
     </div>
-  )
+  );
 }

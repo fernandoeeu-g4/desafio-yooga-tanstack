@@ -1,0 +1,4 @@
+const e = "https://i.imgur.com/WLIacEY.png", a = [{ id: "1", name: "A\xE7a\xED Natural da Casa", priceLabel: "R$40,00", discountedPriceLabel: "R$20,00", image: e, description: "Sabor intenso e espec\xEDfico do fruto a\xE7a\xED com sabor \xFAnico e agrad\xE1vel, que no momento de consumo pode ser...", discountTagLabel: "-50%" }, { id: "2", name: "10 Litros de Sorvete de A\xE7a\xED", priceLabel: "R$100,00", discountedPriceLabel: "R$50,00", image: e, description: "A\xE7a\xED extra cremoso de qualidade, (la\xE7a cremes) na cumbuca de isopor, com coberturas e complementos variados.", discountTagLabel: "-50%" }, { id: "3", name: "A\xE7a\xED com Morango", priceLabel: "R$22,90", discountedPriceLabel: null, image: e, description: "A\xE7a\xED e morango.", discountTagLabel: null }];
+
+export { a };
+//# sourceMappingURL=products.mock-BhjArKya.mjs.map

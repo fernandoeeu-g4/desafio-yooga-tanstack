@@ -1,11 +1,9 @@
-import { fakeRandomDelay } from "@/shared/helpers/async";
+import { createServerFn } from "@tanstack/start";
 import { bestSellersProductsMock } from "./products.mock";
-import { ProductType } from "./products.types";
 
-type GetProductsInSale = {
-  storeId: string;
-};
-
-export function useProductsInSale({ storeId }: GetProductsInSale) {
-  return { data: bestSellersProductsMock, isLoading: false };
-}
+export const fetchProductsInSale = createServerFn({ method: "GET" })
+  .validator((data: string) => data)
+  .handler(async ({ data }) => {
+    console.info(`Fetching products in sale with storeId ${data}...`);
+    return bestSellersProductsMock;
+  });
